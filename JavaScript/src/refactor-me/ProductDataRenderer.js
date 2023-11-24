@@ -11,7 +11,7 @@ function renderTable(containerId, currency, products) {
 	containerElement.id = containerId;
   
 	let tableHtml = `<table class="table table-striped">
-		<thead>
+		<thead style="background-color: yellow;">
 		  <tr><td colspan="3">Products (${currency})</td></tr>
 		  <tr>
 			<td>Name</td>
