@@ -12,11 +12,22 @@ const CURRENCIES_AVAILABLE = {
   },
 };
 
-const LAWN_MOWER_REPOSITORY = new LawnmowerRepository();
-const PHONE_CASE_REPOSITORY = new PhoneCaseRepository();
-const TSHIRT_REPOSITORY = new TShirtRepository();
+const LAWN_MOWER = {
+	repository: new LawnmowerRepository(),
+	type: "Lawnmower"
+}
 
-function extractProductData(repository, currencyFactor) {
+const PHONE_CASE = {
+	repository: new PhoneCaseRepository(),
+	type: "Phone Case"
+}
+
+const TSHIRT = {
+	repository: new TShirtRepository(),
+	type: "T-Shirt"
+}
+
+function extractProductData(repository, type, currencyFactor) {
   const products = [];
 
   const items = repository.getAll();
@@ -25,7 +36,7 @@ function extractProductData(repository, currencyFactor) {
       id: items[i].id,
       name: items[i].name,
       price: (items[i].price * currencyFactor).toFixed(2),
-      type: repository.type,
+      type,
     });
   }
 
@@ -35,9 +46,9 @@ function extractProductData(repository, currencyFactor) {
 function getProductDataForCurrency(currency) {
   const products = [];
 
-  products.push(...extractProductData(LAWN_MOWER_REPOSITORY, currency.value));
-  products.push(...extractProductData(PHONE_CASE_REPOSITORY, currency.value));
-  products.push(...extractProductData(TSHIRT_REPOSITORY, currency.value));
+  products.push(...extractProductData(LAWN_MOWER.repository, LAWN_MOWER.type, currency.value));
+  products.push(...extractProductData(PHONE_CASE.repository, PHONE_CASE.type, currency.value));
+  products.push(...extractProductData(TSHIRT.repository, TSHIRT.type, currency.value));
 
   return products;
 }
