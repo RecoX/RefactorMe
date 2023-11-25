@@ -23,3 +23,5 @@ LawnmowerRepository.prototype.getAll = function () {
 		}
 	];
 }
+
+export default LawnmowerRepository;

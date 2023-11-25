@@ -19,3 +19,5 @@ PhoneCaseRepository.prototype.getAll = function () {
         }
 	]
 }
+
+export default PhoneCaseRepository;

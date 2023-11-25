@@ -1,4 +1,6 @@
-﻿function ProductDataRenderer() {}
+﻿import ProductDataConsolidator from "./ProductDataConsolidator.js";
+
+function ProductDataRenderer() {}
 
 ProductDataRenderer.prototype.render = function () {
   renderTable("nzdProducts", "NZD", ProductDataConsolidator.get());
@@ -36,3 +38,5 @@ function renderTable(containerId, currency, products) {
 	parentDiv.appendChild(containerElement);
 	containerElement.innerHTML = tableHtml;
   }
+
+export default ProductDataRenderer;
