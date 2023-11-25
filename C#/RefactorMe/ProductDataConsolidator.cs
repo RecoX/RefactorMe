@@ -3,124 +3,101 @@ using RefactorMe.DontRefactor.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace RefactorMe
 {
     public class ProductDataConsolidator
     {
-        public static List<Product> Get() {
-            var l = new LawnmowerRepository().GetAll();
-            var p = new PhoneCaseRepository().GetAll();
-            var t = new TShirtRepository().GetAll();
+        private const double NZDExchangeRate = 1.0;
+        private const double EUROExchangeRate = 0.67;
+        private const double USDExchangeRate = 0.76;
 
-            var ps = new List<Product>();
+        private static readonly LawnmowerRepository LawnmowerRepository = new LawnmowerRepository();
+        private static readonly PhoneCaseRepository PhoneCaseRepository = new PhoneCaseRepository();
+        private static readonly TShirtRepository TShirtRepository = new TShirtRepository();
 
-            foreach (var i in l) {
-                ps.Add(new Product() {
-                    Id = i.Id,
-                    Name = i.Name,
-                    Price = i.Price,
-                    Type = "Lawnmower"
-                });
-            }
+        public static List<Product> Get()
+        {
+            var lawnmowers = LawnmowerRepository.GetAll();
+            var phoneCases = PhoneCaseRepository.GetAll();
+            var tShirts = TShirtRepository.GetAll();
 
-            foreach (var i in p) {
-                ps.Add(new Product() {
-                    Id = i.Id,
-                    Name = i.Name,
-                    Price = i.Price,
-                    Type = "Phone Case"
-                });
-            }
+            var products = new List<Product>();
 
-            foreach (var i in t) {
-                ps.Add(new Product() {
-                    Id = i.Id,
-                    Name = i.Name,
-                    Price = i.Price,
-                    Type = "T-Shirt"
-                });
-            }
+            products.AddRange(GenerateLawnowersProducts(lawnmowers, NZDExchangeRate, "Lawnmower"));
+            products.AddRange(GeneratePhoneCasesProducts(phoneCases, NZDExchangeRate, "Phone Case"));
+            products.AddRange(GenerateTShirtsProducts(tShirts, NZDExchangeRate, "T-Shirt"));
 
-            return ps;
+            return products;
         }
 
-        public static List<Product> GetInUSDollars() {
-            var l = new LawnmowerRepository().GetAll();
-            var p = new PhoneCaseRepository().GetAll();
-            var t = new TShirtRepository().GetAll();
+        public static List<Product> GetInUSDollars()
+        {
+            var lawnmowers = LawnmowerRepository.GetAll();
+            var phoneCases = PhoneCaseRepository.GetAll();
+            var tShirts = TShirtRepository.GetAll();
 
-            var ps = new List<Product>();
+            var products = new List<Product>();
 
-            foreach (var i in l) {
-                ps.Add(new Product() {
-                    Id = i.Id,
-                    Name = i.Name,
-                    Price = i.Price * 0.76,
-                    Type = "Lawnmower"
-                });
-            }
+            products.AddRange(GenerateLawnowersProducts(lawnmowers, USDExchangeRate, "Lawnmower"));
+            products.AddRange(GeneratePhoneCasesProducts(phoneCases, USDExchangeRate, "Phone Case"));
+            products.AddRange(GenerateTShirtsProducts(tShirts, USDExchangeRate, "T-Shirt"));
 
-            foreach (var i in p) {
-                ps.Add(new Product() {
-                    Id = i.Id,
-                    Name = i.Name,
-                    Price = i.Price * 0.76,
-                    Type = "Phone Case"
-                });
-            }
-
-            foreach (var i in t) {
-                ps.Add(new Product() {
-                    Id = i.Id,
-                    Name = i.Name,
-                    Price = i.Price * 0.76,
-                    Type = "T-Shirt"
-                });
-            }
-
-            return ps;
+            return products;
         }
 
-        public static List<Product> GetInEuros() {
-            var l = new LawnmowerRepository().GetAll();
-            var p = new PhoneCaseRepository().GetAll();
-            var t = new TShirtRepository().GetAll();
+        public static List<Product> GetInEuros()
+        {
+            var lawnmowers = LawnmowerRepository.GetAll();
+            var phoneCases = PhoneCaseRepository.GetAll();
+            var tShirts = TShirtRepository.GetAll();
 
-            var ps = new List<Product>();
+            var products = new List<Product>();
 
-            foreach (var i in l) {
-                ps.Add(new Product() {
-                    Id = i.Id,
-                    Name = i.Name,
-                    Price = i.Price * 0.67,
-                    Type = "Lawnmower"
-                });
-            }
+            products.AddRange(GenerateLawnowersProducts(lawnmowers, EUROExchangeRate, "Lawnmower"));
+            products.AddRange(GeneratePhoneCasesProducts(phoneCases, EUROExchangeRate, "Phone Case"));
+            products.AddRange(GenerateTShirtsProducts(tShirts, EUROExchangeRate, "T-Shirt"));
 
-            foreach (var i in p) {
-                ps.Add(new Product() {
-                    Id = i.Id,
-                    Name = i.Name,
-                    Price = i.Price * 0.67,
-                    Type = "Phone Case"
-                });
-            }
-
-            foreach (var i in t) {
-                ps.Add(new Product() {
-                    Id = i.Id,
-                    Name = i.Name,
-                    Price = i.Price * 0.67,
-                    Type = "T-Shirt"
-                });
-            }
-
-            return ps;
+            return products;
         }
- 
- 
+
+        private static List<Product> GenerateLawnowersProducts(IEnumerable<Lawnmower> lawnmowers, double priceFactor, string type)
+        {
+            return lawnmowers
+                .Select(item => new Product
+                {
+                    Id = item.Id,
+                    Name = item.Name,
+                    Price = Math.Round(item.Price * priceFactor, 2),
+                    Type = type
+                })
+                .ToList();
+        }
+
+        private static List<Product> GeneratePhoneCasesProducts(IEnumerable<PhoneCase> phoneCases, double priceFactor, string type)
+        {
+            return phoneCases
+                .Select(item => new Product
+                {
+                    Id = item.Id,
+                    Name = item.Name,
+                    Price = Math.Round(item.Price * priceFactor, 2),
+                    Type = type
+                })
+                .ToList();
+        }
+
+        private static List<Product> GenerateTShirtsProducts(IEnumerable<TShirt> tShirts, double priceFactor, string type)
+        {
+            return tShirts
+                .Select(item => new Product
+                {
+                    Id = item.Id,
+                    Name = item.Name,
+                    Price = Math.Round(item.Price * priceFactor, 2),
+                    Type = type
+                })
+                .ToList();
+        }
     }
 }
