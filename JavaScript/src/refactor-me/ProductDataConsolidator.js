@@ -1,4 +1,8 @@
-﻿function ProductDataConsolidator() {}
+﻿import LawnmowerRepository from '../do-not-refactor/LawnmowerRepository';
+import PhoneCaseRepository from '../do-not-refactor/PhoneCaseRepository';
+import TShirtRepository from '../do-not-refactor/TShirtRepository';
+
+function ProductDataConsolidator() {}
 
 const CURRENCIES_AVAILABLE = {
   NZD: {
@@ -64,3 +68,5 @@ ProductDataConsolidator.getInUSDollars = function () {
 ProductDataConsolidator.getInEuros = function () {
   return getProductDataForCurrency(CURRENCIES_AVAILABLE.EURO);
 };
+
+export default ProductDataConsolidator;

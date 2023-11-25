@@ -4,3 +4,5 @@ C#/RefactorMe.DontRefactor/obj/Debug/.NETFramework,Version=v4.5.AssemblyAttribut
 C#/RefactorMe.DontRefactor/obj/Debug/RefactorMe.DontRefactor.csproj.AssemblyReference.cache
 C#/RefactorMe.Tests/obj/Debug/.NETFramework,Version=v4.5.AssemblyAttributes.cs
 C#/RefactorMe.Tests/obj/Debug/RefactorMe.Tests.csproj.AssemblyReference.cache
+JavaScript/node_modules/*
+JavaScript/.parcel-cache

@@ -23,3 +23,5 @@ TShirtRepository.prototype.getAll = function () {
         }
 	];
 }
+
+export default TShirtRepository;
