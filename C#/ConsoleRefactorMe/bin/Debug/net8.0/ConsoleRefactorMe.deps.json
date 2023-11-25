@@ -1,0 +1,49 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "ConsoleRefactorMe/1.0.0": {
+        "dependencies": {
+          "RefactorMe": "1.0.0"
+        },
+        "runtime": {
+          "ConsoleRefactorMe.dll": {}
+        }
+      },
+      "RefactorMe/1.0.0": {
+        "dependencies": {
+          "RefactorMe.DontRefactor": "1.0.0"
+        },
+        "runtime": {
+          "RefactorMe.dll": {}
+        }
+      },
+      "RefactorMe.DontRefactor/1.0.0": {
+        "runtime": {
+          "RefactorMe.DontRefactor.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ConsoleRefactorMe/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "RefactorMe/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "RefactorMe.DontRefactor/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

@@ -1,0 +1,107 @@
+{
+  "version": 3,
+  "targets": {
+    "net8.0": {
+      "RefactorMe/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "RefactorMe.DontRefactor": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/RefactorMe.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RefactorMe.dll": {}
+        }
+      },
+      "RefactorMe.DontRefactor/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/RefactorMe.DontRefactor.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RefactorMe.DontRefactor.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "RefactorMe/1.0.0": {
+      "type": "project",
+      "path": "../RefactorMe/RefactorMe.csproj",
+      "msbuildProject": "../RefactorMe/RefactorMe.csproj"
+    },
+    "RefactorMe.DontRefactor/1.0.0": {
+      "type": "project",
+      "path": "../RefactorMe.DontRefactor/RefactorMe.DontRefactor.csproj",
+      "msbuildProject": "../RefactorMe.DontRefactor/RefactorMe.DontRefactor.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net8.0": [
+      "RefactorMe >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\reco_\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\reco_\\OneDrive\\Escritorio\\RefactorMe\\C#\\ConsoleRefactorMe\\ConsoleRefactorMe.csproj",
+      "projectName": "ConsoleRefactorMe",
+      "projectPath": "C:\\Users\\reco_\\OneDrive\\Escritorio\\RefactorMe\\C#\\ConsoleRefactorMe\\ConsoleRefactorMe.csproj",
+      "packagesPath": "C:\\Users\\reco_\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\reco_\\OneDrive\\Escritorio\\RefactorMe\\C#\\ConsoleRefactorMe\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\reco_\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net8.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "projectReferences": {
+            "C:\\Users\\reco_\\OneDrive\\Escritorio\\RefactorMe\\C#\\RefactorMe\\RefactorMe.csproj": {
+              "projectPath": "C:\\Users\\reco_\\OneDrive\\Escritorio\\RefactorMe\\C#\\RefactorMe\\RefactorMe.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net8.0": {
+        "targetAlias": "net8.0",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

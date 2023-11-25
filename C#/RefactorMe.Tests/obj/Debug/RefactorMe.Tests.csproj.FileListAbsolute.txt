@@ -1,0 +1,12 @@
+C:\Users\reco_\OneDrive\Escritorio\RefactorMe\C#\RefactorMe.Tests\bin\Debug\RefactorMe.Tests.dll
+C:\Users\reco_\OneDrive\Escritorio\RefactorMe\C#\RefactorMe.Tests\bin\Debug\RefactorMe.Tests.pdb
+C:\Users\reco_\OneDrive\Escritorio\RefactorMe\C#\RefactorMe.Tests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\reco_\OneDrive\Escritorio\RefactorMe\C#\RefactorMe.Tests\bin\Debug\RefactorMe.dll
+C:\Users\reco_\OneDrive\Escritorio\RefactorMe\C#\RefactorMe.Tests\bin\Debug\RefactorMe.DontRefactor.dll
+C:\Users\reco_\OneDrive\Escritorio\RefactorMe\C#\RefactorMe.Tests\bin\Debug\RefactorMe.DontRefactor.pdb
+C:\Users\reco_\OneDrive\Escritorio\RefactorMe\C#\RefactorMe.Tests\bin\Debug\RefactorMe.pdb
+C:\Users\reco_\OneDrive\Escritorio\RefactorMe\C#\RefactorMe.Tests\obj\Debug\RefactorMe.Tests.csproj.AssemblyReference.cache
+C:\Users\reco_\OneDrive\Escritorio\RefactorMe\C#\RefactorMe.Tests\obj\Debug\RefactorMe.Tests.csproj.CoreCompileInputs.cache
+C:\Users\reco_\OneDrive\Escritorio\RefactorMe\C#\RefactorMe.Tests\obj\Debug\RefactorMe.Tests.csproj.CopyComplete
+C:\Users\reco_\OneDrive\Escritorio\RefactorMe\C#\RefactorMe.Tests\obj\Debug\RefactorMe.Tests.dll
+C:\Users\reco_\OneDrive\Escritorio\RefactorMe\C#\RefactorMe.Tests\obj\Debug\RefactorMe.Tests.pdb

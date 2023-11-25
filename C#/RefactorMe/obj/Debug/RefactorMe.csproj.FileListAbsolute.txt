@@ -1,0 +1,9 @@
+C:\Users\reco_\OneDrive\Escritorio\RefactorMe\C#\RefactorMe\bin\Debug\RefactorMe.dll
+C:\Users\reco_\OneDrive\Escritorio\RefactorMe\C#\RefactorMe\bin\Debug\RefactorMe.pdb
+C:\Users\reco_\OneDrive\Escritorio\RefactorMe\C#\RefactorMe\bin\Debug\RefactorMe.DontRefactor.dll
+C:\Users\reco_\OneDrive\Escritorio\RefactorMe\C#\RefactorMe\bin\Debug\RefactorMe.DontRefactor.pdb
+C:\Users\reco_\OneDrive\Escritorio\RefactorMe\C#\RefactorMe\obj\Debug\RefactorMe.csproj.AssemblyReference.cache
+C:\Users\reco_\OneDrive\Escritorio\RefactorMe\C#\RefactorMe\obj\Debug\RefactorMe.csproj.CoreCompileInputs.cache
+C:\Users\reco_\OneDrive\Escritorio\RefactorMe\C#\RefactorMe\obj\Debug\RefactorMe.csproj.CopyComplete
+C:\Users\reco_\OneDrive\Escritorio\RefactorMe\C#\RefactorMe\obj\Debug\RefactorMe.dll
+C:\Users\reco_\OneDrive\Escritorio\RefactorMe\C#\RefactorMe\obj\Debug\RefactorMe.pdb
