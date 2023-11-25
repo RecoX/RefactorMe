@@ -1,0 +1,13 @@
+{
+  "name": "refactor-me",
+  "version": "1.0.0",
+  "source": "src/index.js",
+  "main": "dist/refactor-me.js",
+  "scripts": {
+    "watch": "parcel watch",
+    "build": "parcel build"
+  },
+  "devDependencies": {
+    "parcel": "latest"
+  }
+}
