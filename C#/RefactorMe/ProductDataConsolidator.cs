@@ -18,45 +18,33 @@ namespace RefactorMe
 
         public static List<Product> Get()
         {
-            var lawnmowers = LawnmowerRepository.GetAll();
-            var phoneCases = PhoneCaseRepository.GetAll();
-            var tShirts = TShirtRepository.GetAll();
-
             var products = new List<Product>();
 
-            products.AddRange(GenerateLawnowersProducts(lawnmowers, NZDExchangeRate, "Lawnmower"));
-            products.AddRange(GeneratePhoneCasesProducts(phoneCases, NZDExchangeRate, "Phone Case"));
-            products.AddRange(GenerateTShirtsProducts(tShirts, NZDExchangeRate, "T-Shirt"));
+            products.AddRange(GenerateLawnowersProducts(LawnmowerRepository.GetAll(), NZDExchangeRate, "Lawnmower"));
+            products.AddRange(GeneratePhoneCasesProducts(PhoneCaseRepository.GetAll(), NZDExchangeRate, "Phone Case"));
+            products.AddRange(GenerateTShirtsProducts(TShirtRepository.GetAll(), NZDExchangeRate, "T-Shirt"));
 
             return products;
         }
 
         public static List<Product> GetInUSDollars()
         {
-            var lawnmowers = LawnmowerRepository.GetAll();
-            var phoneCases = PhoneCaseRepository.GetAll();
-            var tShirts = TShirtRepository.GetAll();
-
             var products = new List<Product>();
 
-            products.AddRange(GenerateLawnowersProducts(lawnmowers, USDExchangeRate, "Lawnmower"));
-            products.AddRange(GeneratePhoneCasesProducts(phoneCases, USDExchangeRate, "Phone Case"));
-            products.AddRange(GenerateTShirtsProducts(tShirts, USDExchangeRate, "T-Shirt"));
+            products.AddRange(GenerateLawnowersProducts(LawnmowerRepository.GetAll(), USDExchangeRate, "Lawnmower"));
+            products.AddRange(GeneratePhoneCasesProducts(PhoneCaseRepository.GetAll(), USDExchangeRate, "Phone Case"));
+            products.AddRange(GenerateTShirtsProducts(TShirtRepository.GetAll(), USDExchangeRate, "T-Shirt"));
 
             return products;
         }
 
         public static List<Product> GetInEuros()
         {
-            var lawnmowers = LawnmowerRepository.GetAll();
-            var phoneCases = PhoneCaseRepository.GetAll();
-            var tShirts = TShirtRepository.GetAll();
-
             var products = new List<Product>();
 
-            products.AddRange(GenerateLawnowersProducts(lawnmowers, EUROExchangeRate, "Lawnmower"));
-            products.AddRange(GeneratePhoneCasesProducts(phoneCases, EUROExchangeRate, "Phone Case"));
-            products.AddRange(GenerateTShirtsProducts(tShirts, EUROExchangeRate, "T-Shirt"));
+            products.AddRange(GenerateLawnowersProducts(LawnmowerRepository.GetAll(), EUROExchangeRate, "Lawnmower"));
+            products.AddRange(GeneratePhoneCasesProducts(PhoneCaseRepository.GetAll(), EUROExchangeRate, "Phone Case"));
+            products.AddRange(GenerateTShirtsProducts(TShirtRepository.GetAll(), EUROExchangeRate, "T-Shirt"));
 
             return products;
         }
